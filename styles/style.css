@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333;
+}
+
+#game {
+  margin: auto;
+  width: 500px;
+  height: 200px;
+  border: 1px solid white;
+  background-image: url(../img/night-background.png);
+  background-position: center;
+  background-size: contain;
+  display: grid;
+
+  transform: scale(2) translateY(40%);
+}
+
+#quit-btn a{
+  text-decoration: none;
+  color: #a5a5a5;
+}
+
+.inplace {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#lose-screen {
+  color: red;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+#start-screen {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+div {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+ul {
+  list-style: none;
+}
+
+.current-menu {
+  width: 100px;
+  height: 110px;
+  margin: auto;
+  margin-top: 40px;
+  border: 1px solid white;
+}
+
+.current-menu ul {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.current-menu ul li {
+  width: 80px;
+  margin: auto;
+  margin-top: 4px;
+}
+
+.current-menu ul li button {
+  width: 80px;
+  background-color: #1e1e1e;
+  color: #a5a5a5
+}
+
+.current-menu ul li button:hover{
+  background-color: #5e5e5e;
+}
+
+#character{
+  width: 30px;
+  height: 50px;
+  /* border: 1px solid white; */
+  background-image: url(../img/johnny-walking.gif);
+  background-position: -15px -11px;
+  position: relative;
+  top: 150px;
+  left: 30px;
+}
+
+.animate-jump {
+  animation: jump 500ms ;
+}
+
+@keyframes jump {
+  0% {top: 150px;}
+  40% {top: 100px;}
+  60% {top: 100px;}
+  100% {top: 150px;}
+}
+
+#obstacle{
+  width: 25px;
+  height: 20px;
+  /* background-color: blue; */
+  background-image: url(../img/projectile.gif);
+  background-size: 150%;
+  background-position: center;
+  /* border: 1px solid aqua; */
+  position: relative;
+  top: 178px;
+  left: 475px;
+}
+
+.hide {
+  display: none;
+}
+
+.animate-obstacle {
+  animation: obstacle 1s infinite linear;
+}
+
+@keyframes obstacle {
+  0%{left: 480px;}
+  100%{left: 0px;}
+}
